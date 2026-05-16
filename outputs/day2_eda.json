@@ -1,0 +1,30 @@
+{
+    "experiment": "Day 2 - Exploratory Data Analysis",
+    "descriptive_statistics": {
+        "numeric_summary": "See plots/histograms.png"
+    },
+    "missing_values_handling": {
+        "columns_dropped": [
+            "ca",
+            "thal",
+            "slope"
+        ],
+        "imputation_method": "median for numeric, mode for categorical"
+    },
+    "visualizations_created": [
+        "histograms.png - Distribution of all features",
+        "boxplots_key_features.png - Boxplots by target class",
+        "correlation_heatmap.png - Feature correlations",
+        "missing_values_heatmap.png - Missing data pattern"
+    ],
+    "key_findings": {
+        "most_correlated_with_disease": [
+            "thalach",
+            "oldpeak",
+            "cp"
+        ],
+        "class_imbalance_ratio": "~1.2:1",
+        "skewed_features": []
+    },
+    "timestamp": "2026-05-16 22:07:55"
+}

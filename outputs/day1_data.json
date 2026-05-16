@@ -1,0 +1,54 @@
+{
+    "experiment": "Day 1 - Data Loading",
+    "dataset_info": {
+        "source": "UCI Heart Disease Dataset (Kaggle)",
+        "filename": "heart.csv",
+        "original_shape": [
+            303,
+            14
+        ],
+        "columns": [
+            "age",
+            "trestbps",
+            "chol",
+            "fbs",
+            "thalch",
+            "exang",
+            "oldpeak",
+            "ca",
+            "num",
+            "high_bp",
+            "high_chol",
+            "risk_score",
+            "senior",
+            "sex_Male",
+            "dataset_Hungary",
+            "dataset_Switzerland",
+            "dataset_VA Long Beach",
+            "cp_atypical angina",
+            "cp_non-anginal",
+            "cp_typical angina",
+            "restecg_normal",
+            "restecg_st-t abnormality",
+            "slope_flat",
+            "slope_upsloping",
+            "thal_normal",
+            "thal_reversable defect"
+        ],
+        "target_variable": "num",
+        "target_description": "0 = no disease, 1-4 = disease severity"
+    },
+    "initial_observations": {
+        "missing_values_present": true,
+        "missing_encoded_as": "Question marks (?)",
+        "columns_with_missing": {
+            "ca": "61.1%",
+            "thal": "48.6%",
+            "slope": "30.9%",
+            "oldpeak": "6.2%",
+            "fbs": "9.0%"
+        },
+        "class_distribution": "Imbalanced"
+    },
+    "timestamp": "2026-05-16 22:07:55"
+}

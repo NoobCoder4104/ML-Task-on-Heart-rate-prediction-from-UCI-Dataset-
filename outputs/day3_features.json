@@ -1,0 +1,106 @@
+{
+    "experiment": "Day 3 - Feature Engineering",
+    "preprocessing_pipeline": [
+        {
+            "step": 1,
+            "action": "Drop columns with >50% missing",
+            "columns_removed": [
+                "ca",
+                "thal",
+                "slope"
+            ],
+            "reason": "Too many missing values to impute reliably"
+        },
+        {
+            "step": 2,
+            "action": "Median imputation for numeric features",
+            "features": [
+                "trestbps",
+                "chol",
+                "thalach",
+                "oldpeak"
+            ],
+            "reason": "Robust to outliers in medical data"
+        },
+        {
+            "step": 3,
+            "action": "Mode imputation for categorical features",
+            "features": [
+                "fbs",
+                "exang",
+                "restecg"
+            ],
+            "reason": "Most frequent category is best guess"
+        },
+        {
+            "step": 4,
+            "action": "One-hot encoding",
+            "features_encoded": [
+                "cp",
+                "restecg"
+            ],
+            "drop_first": true,
+            "reason": "Avoid dummy variable trap"
+        },
+        {
+            "step": 5,
+            "action": "Feature scaling",
+            "method": "StandardScaler (mean=0, std=1)",
+            "features_scaled": [
+                "age",
+                "trestbps",
+                "chol",
+                "thalach",
+                "oldpeak"
+            ]
+        }
+    ],
+    "new_features_created": [
+        {
+            "name": "chol_age_ratio",
+            "formula": "chol / age",
+            "interpretation": "Age-adjusted cholesterol level"
+        },
+        {
+            "name": "thalach_ratio",
+            "formula": "thalach / (220 - age)",
+            "interpretation": "Heart rate efficiency (actual/max predicted)"
+        }
+    ],
+    "final_dataset": {
+        "shape": [
+            920,
+            26
+        ],
+        "num_features": 26,
+        "feature_names": [
+            "age",
+            "trestbps",
+            "chol",
+            "fbs",
+            "thalch",
+            "exang",
+            "oldpeak",
+            "ca",
+            "num",
+            "high_bp",
+            "high_chol",
+            "risk_score",
+            "senior",
+            "sex_Male",
+            "dataset_Hungary",
+            "dataset_Switzerland",
+            "dataset_VA Long Beach",
+            "cp_atypical angina",
+            "cp_non-anginal",
+            "cp_typical angina",
+            "restecg_normal",
+            "restecg_st-t abnormality",
+            "slope_flat",
+            "slope_upsloping",
+            "thal_normal",
+            "thal_reversable defect"
+        ]
+    },
+    "timestamp": "2026-05-16 22:07:55"
+}
