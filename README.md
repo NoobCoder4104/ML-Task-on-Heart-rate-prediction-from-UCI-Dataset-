@@ -54,12 +54,19 @@ EDA was performed to understand the dataset before model development.
 ### Completed analyses
 
 ✅ Dataset shape and structure inspection
+
 ✅ Data type verification
+
 ✅ Missing value analysis
+
 ✅ Descriptive statistics (mean, std, min, max)
+
 ✅ Distribution analysis using histograms
+
 ✅ Outlier detection using boxplots
+
 ✅ Correlation analysis and heatmap
+
 ✅ Class imbalance checking
 
 ### Key insights
