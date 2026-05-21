@@ -26,7 +26,9 @@ This project builds a complete **supervised machine learning classification pipe
 ## 🗂️ Dataset Information
 
 **Dataset:** UCI Heart Disease Dataset
+
 **Source:** Kaggle / UCI Machine Learning Repository
+
 **Problem Type:** Binary Classification
 
 ### Sample Features
